@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link the style sheets and Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="shortcut icon" type="image/png" href="images/pigeon-icon.png"/>
+    <!-- Image by <a href="https://pixabay.com/users/chiplanay-1971251/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">chiplanay</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">Pixabay</a> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Enterprise Resource Planning Experiment</title>
+  </head>
+
+  <body>
+    
+    <main>
+        
+<ul class="bouttons">
+    <li><a href="#home"></a></li>
+    <li><a href="#news"></a></li>
+    <li><a href="#contact"></a></li>
+    <li><a href="#about"></a></li>
+    
+    
+</ul>
+        
+
+        <h1> You finished the third task. </h1>
+        <h1>Please click "Next" to go to the survey. </h1>
+      <br>
+      
+
+           
+        <div class="bouttons"> <a href="Step4.html" class="previous" style="display: inline-block"></a>
+             <a href="https://umich.qualtrics.com/jfe/form/SV_7NAjH7eaKnQTL14" class="next" style="display: inline-block" id="surveynxt"> Next</a></div>
+          
+      
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+         <script>
+         var responseid = localStorage.getItem("response_Id");
+         var url = "https://umich.qualtrics.com/jfe/form/SV_7NAjH7eaKnQTL14?response_Id="+responseid;
+         $("#surveynxt").attr("href", url);
+         localStorage.clear();
+         </script>    
+            
+    </main>
+<!--
+    <footer>
+      <p>If you have any questions please contact: Rasha <br/>
+        Rashama@umich.edu</p>
+    </footer>
+-->
+  </body>
+</html>

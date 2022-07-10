@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link the style sheets and Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="shortcut icon" type="image/png" href="images/pigeon-icon.png" />
+    <!-- Image by <a href="https://pixabay.com/users/chiplanay-1971251/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">chiplanay</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">Pixabay</a> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Enterprise Resource Planning Experiment</title>
+</head>
+
+<body>
+
+    <main>
+        <!-- <h1>Experiment</h1> -->
+        <div class="text">
+            <h2 style="text-align: center">First Task</h2>
+
+            <!--      <h2>About</h2>-->
+            <p>The Enterprise Resource Planning software has multiple modules. Please choose Workforce Management Module from the list to perform the first task.</p>
+            <br>
+
+            <label for="">Choose a module:</label>
+            <select name="" id="taskchoose">
+                <option value="task1"> </option>
+                <option value="task1"> Order Management Module.</option>
+                <option value="task1"> Procurement Module.</option>
+                <option value="task1"> Warehouse Management Module.</option>
+                <option value="task1"> Inventory Management Module.</option>
+                <option value="task1"> Finance and Accounting Module. </option>
+                <option value="task1"> Manufacturing Module. </option>
+                <option value="task1"> Supply Chain Management Module. </option>
+                <option value="task1"> Customer Relationship Management Module. </option>
+                <option value="task1"> Professional Services Automation Module. </option>
+                <option value="task1"> Human Resources Management Module. </option>
+                <option value="work"> Workforce Management Module. </option>
+                <option value="task1"> Ecommerce Module. </option>
+                <option value="task1"> Marketing Automation Module. </option>
+
+
+            </select>
+            <P>
+                <a onclick="submit()" href="#">Next</a>
+            </P>
+
+        </div>
+
+
+
+        <script>
+            localStorage.clear();
+            function submit() {
+                var task = document.getElementById("taskchoose");
+                if (task.value !== "work") {
+                    alert("Please, choose ''Workforce Management task'' from the list");
+                    task.style.borderColor = "red";
+
+
+                }
+                else {
+                    window.location.href = "Step1.html";
+
+                }
+            }
+
+        </script>
+
+
+    </main>
+  
+</body>
+</html>

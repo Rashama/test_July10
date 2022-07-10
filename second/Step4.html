@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link the style sheets and Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="shortcut icon" type="image/png" href="images/pigeon-icon.png" />
+    <!-- Image by <a href="https://pixabay.com/users/chiplanay-1971251/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">chiplanay</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">Pixabay</a> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Enterprise Resource Planning Experiment</title>
+</head>
+
+<body>
+
+    <main>
+        <ul class="yyy">
+            <li><a href="#home"><b>Second Task</b></a></li>
+        </ul>
+
+        <ul class="bouttons">
+            <li><a href="#home">Step 1</a></li>
+            <li><a href="#news">Step 2</a></li>
+            <li><a href="#contact">Step 3</a></li>
+            <li><a style="color:burlywood; font-size: 20px" href="#about">Step 4</a></li>
+
+
+        </ul>
+
+
+        <h1>Step 4: Solutions to Help Less Productive Employees</h1>
+
+
+
+        <div class="xxx">
+            <!--   <h2>Please answer the following questions</h2>-->
+            <form>
+                <p>Less productive employees have high rates of project failure, absenteeism, and customer complaints.</p>
+                <p>Could you suggest some solutions to help less productive employees? Please provide at least <u>three solutions</u>, potential suggetsions include training programs, bonuses, and benefits.</p>
+                <label for="fname"></label>
+                <input style="width:94%;padding:10px" type="text" id="q82" name="q8">
+                <input style="width:94%;padding:10px" type="text" id="q92" name="q9">
+
+                <input style="width:94%;padding:10px" type="text" id="q102" name="q10">
+                <input style="width:94%;padding:10px" type="text" id="q112" name="q11">
+
+
+            </form>
+        </div>
+        <p></p>
+
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>
+            var q82 = document.getElementById("q82");
+            var q92 = document.getElementById("q92");
+            var q102 = document.getElementById("q102");
+            var q112 = document.getElementById("q112");
+
+            document.getElementById("q82").value = localStorage.getItem("q82");
+            document.getElementById("q92").value = localStorage.getItem("q92");
+            document.getElementById("q102").value = localStorage.getItem("q102");
+            document.getElementById("q112").value = localStorage.getItem("q112");
+
+            function submit4() {
+                var t = 0;
+                if (q82.value !== "") {
+
+                    t = t + 1;
+                }
+                if (q92.value !== "") {
+                    t = t + 1;
+                }
+                if (q102.value !== "") {
+                    t = t + 1;
+                }
+                if (q112.value !== "") {
+                    t = t + 1;
+                }
+                if (t > 2) {
+                    localStorage.setItem("q82", q82.value);
+                    localStorage.setItem("q92", q92.value);
+                    localStorage.setItem("q102", q102.value);
+                    localStorage.setItem("q112", q112.value);
+                    var last_insertId = localStorage.getItem("last_insertId");
+                    localStorage.clear();
+                     $.ajax({
+                        type: 'post',
+                        url: '../connection/ajax.php',
+                        data:{ task:'secondtask','last_insertId':last_insertId,idea1: q82.value, idea2: q92.value,idea3: q102.value,idea4: q112.value},
+                        dataType : "json",
+                        success: function (data) {
+                            localStorage.setItem("last_insertId", last_insertId);
+                            window.location.href = "End.html";
+                        }
+                      });
+                }
+                else {
+                    alert("Please provide three solutions at least");
+
+                }
+            }
+        </script>
+
+
+        <div class="bouttons">
+            <a href="Step3.html" class="previous" style="display: inline-block">&laquo; Back to Step 3</a>
+            <a href="../third/index.html" onclick="submit4()" class="next" style="display: inline-block">Go to Third Task &raquo;</a>
+        </div>
+
+
+
+
+    </main>
+    <!--
+        <footer>
+          <p>If you have any questions please contact: Rasha <br/>
+            Rashama@umich.edu</p>
+        </footer>
+    -->
+</body>
+</html>

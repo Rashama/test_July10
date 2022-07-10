@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link the style sheets and Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="shortcut icon" type="image/png" href="images/pigeon-icon.png" />
+    <!-- Image by <a href="https://pixabay.com/users/chiplanay-1971251/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">chiplanay</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3303111">Pixabay</a> -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Enterprise Resource Planning Experiment</title>
+</head>
+
+<body>
+    
+    <main>
+        <ul class="yyy">
+            <li><a href="#home"><b>First Task</b></a></li>
+        </ul>
+
+        <ul class="bouttons">
+            <li><a  style="color:burlywood; font-size: 20px" href="#home" >Step 1</a></li>
+            <li><a  href="#news">Step 2</a></li>
+            <li><a  href="#contact">Step 3</a></li>
+            <li><a  href="#about">Step 4</a></li>
+
+        </ul>
+
+
+    
+
+
+        <h1>Step 1: Productive Employees</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="colhead"></th>
+                    <th scope="col" class="colhead">Daily Working Hours</th>
+                    <th scope="col" class="colhead">Weekly Working Hours</th>
+                    <th scope="col" class="colhead">Number of Customers</th>
+                    <th scope="col" class="colhead">Project Failur Rate</th>
+                    <th scope="col" class="colhead">Customer Complaints</th>
+                    <th scope="col" class="colhead">Absenteeism Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="rowhead">Employee 1</th>
+
+                    <td>7</td>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>70%</td>
+                    <td>9</td>
+                    <td>2%</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="rowhead">Employee 2</th>
+
+                    <td>3</td>
+                    <td>39</td>
+                    <td>4</td>
+                    <td>20%</td>
+                    <td>2</td>
+                    <td>.01%</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="rowhead"> Employee 3</th>
+
+                    <td>7</td>
+                    <td>44</td>
+                    <td>5</td>
+                    <td>80%</td>
+                    <td>10</td>
+                    <td>1%</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="rowhead">Employee 4</th>
+
+                    <td>6</td>
+                    <td>36</td>
+                    <td>7</td>
+                    <td>70%</td>
+                    <td>9</td>
+                    <td>3%</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="rowhead">Employee 5</th>
+
+                    <td>4</td>
+                    <td>35</td>
+                    <td>9</td>
+                    <td>39%</td>
+                    <td>4</td>
+                    <td>3.9%</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <p></p>
+        <div class="xxx">
+            <h2 style="font-size:small">Please answer the following questions</h2>
+            <form>
+                <label for="fname">How many employees with 5 or more daily working hours?</label>
+                <br>
+                <input type="text" id="q1" name="q1">
+                <label id="q1lbl" style="display:none;color:red">Please Enter the correct value!</label>
+
+                <br>
+                <label for="lname">How many employees with 40 or more weekly working hours?</label>
+                <input type="text" id="q2" name="q2">
+                <label id="q2lbl" style="display:none;color:red">Please Enter the correct value!</label>
+
+                <br>
+                <label for="lname">How many employees have 9 or more customers?</label>
+                <br>
+                <input type="text" id="q3" name="q3">
+                <label id="q3lbl" style="display:none;color:red">Please Enter the correct value!</label>
+
+            </form>
+        </div>
+        <p></p>
+
+        <script>
+
+            try {
+                document.getElementById("q1").value = window.localStorage.getItem("q1");
+
+            } catch (e) {
+
+            }
+            try {
+                document.getElementById("q2").value = window.localStorage.getItem("q2");
+
+            } catch (e) {
+
+            }
+            try {
+                document.getElementById("q3").value = window.localStorage.getItem("q3");
+
+            } catch (e) {
+
+            }
+            
+
+            function submit() {
+                var q1 = document.getElementById("q1");
+                var q2 = document.getElementById("q2");
+                var q3 = document.getElementById("q3");
+                
+                if (q1.value !== "3") {
+                    document.getElementById("q1lbl").style.display = 'block';
+                    q1.style.borderColor = "red";
+                }
+                else {
+                    document.getElementById("q1lbl").style.display = 'none';
+                    q1.style.borderColor = "";
+                    localStorage.setItem("q1", q1.value);
+
+                }
+                if (q2.value !== "2") {
+                    document.getElementById("q2lbl").style.display = 'block';
+                    q2.style.borderColor = "red";
+
+                }
+                else {
+                    document.getElementById("q2lbl").style.display = 'none';
+                    q2.style.borderColor = "";
+                    localStorage.setItem("q2", q2.value);
+
+                }
+                if (q3.value!== "2") {
+                    document.getElementById("q3lbl").style.display = 'block';
+                    q3.style.borderColor = "red";
+
+                }
+                else {
+                    document.getElementById("q3lbl").style.display = 'none';
+                    q2.style.borderColor = "";
+                    localStorage.setItem("q3", q3.value);
+
+                }
+                if (q1.value == "3" && q2.value == "2" && q3.value == "2") {
+
+                    window.localStorage.setItem("q1", 3);
+                    window.localStorage.setItem("q2", 2);
+                    window.localStorage.setItem("q3", 2);
+                    window.location.href = "Step2.html";
+                }
+                else {
+                    alert("Check your answers");
+
+                }
+            }
+
+
+        </script>
+        <!--
+
+        -->
+
+        <div class="bouttons">
+            <a href="index1.html" class="previous" style="display: inline-block">&laquo; Back </a>
+            <a href="#" class="next" style="display: inline-block" onclick="submit()">Go to Step 2 &raquo;</a>
+        </div>
+
+
+
+
+    </main>
+    <!--
+        <footer>
+          <p>If you have any questions please contact: Rasha <br/>
+            Rashama@umich.edu</p>
+        </footer>
+    -->
+</body>
+</html>

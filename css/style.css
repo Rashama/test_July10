@@ -1,0 +1,300 @@
+/*STARTER CODE*/
+
+/*
+We have started some of the selectors for you.
+For others we have provided hints on what the selectors should be.
+There are some missing selectors.
+
+Make sure to learn what the starter code does!!
+*/
+
+/*STARTER CODE - DO NOT CHANGE*/
+main {
+    margin-bottom: 100px;
+    padding-left:150px;padding-right:150px
+}
+
+
+tr{
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+/*END STARTER CODE*/
+
+body{
+  color: #000000;
+  font-size: 16px;
+  margin: 1.2em;
+  background-size: cover ;
+  background-position: center;
+
+  /*Req 1*/
+  font-family: 'Andika', sans-serif;
+
+
+}
+
+h1{
+  color: black;
+  
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.2;
+    margin-left: 5px;
+}
+
+p{
+  /*Req 3*/
+  padding-top: 15px;
+}
+
+a{
+  /*Req 4*/
+  font-size: 16px;
+  color: #B21F50;
+  text-decoration-style: wavy;
+}
+
+/*Req 5*/
+/*Add selector and rule here*/
+/*
+*:focus {
+  border: 3px dashed #417243;
+}
+*/
+
+
+/*Req 6a*/
+td{
+  text-align: center;
+  border-top: 2px solid #000000 ;
+  padding: 10px;
+  font-size:small;
+}
+
+
+/*Req 6b*/
+.colhead{
+  color: #FFFFFF;
+  font-size:x-small;
+  min-width: 100px;
+  padding: 5px;
+  color: #FFFFFF;
+  /* text-align: center; */
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #7e0820 ;
+}
+
+/*Req 6c*/
+.rowhead{
+border-right: 2px solid #000000;
+border-top: 2px solid #000000;
+font-size:small;
+}
+
+/* try to remove this */
+/*Req 6d*/
+tr:nth-child(odd){
+  background-color: transparent;
+}
+
+/*Req 6e*/
+tr:nth-child(even){
+  background-color: #D1D1D1;
+}
+/*Req 6f*/
+tr:hover {
+  background-color: rgba(126, 8, 32, .25);
+}
+
+/*Req 7*/
+table{
+    border: 2px solid #000000;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+
+}
+label{
+    font-size:small;
+}
+
+thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+/*Add selectors and rules here*/
+
+thead tr:last-child th:last-child{
+  border-top-right-radius: 10px;
+}
+
+tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+/*Req 8*/
+footer{
+  width:100%;
+  background:#000000;
+  text-align:center;
+  color: #FFFFFF;
+
+  min-height: 75px;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+}
+
+
+.text{
+ width: 80%;
+    background-color: white;
+  border: 3px solid gray;
+  padding: 10px;
+    
+    line-height: 2;
+ text-align: left;
+    margin: auto;
+  
+
+}
+
+a:link, a:visited {
+  background-color: #7e0820;
+  color: whitesmoke;
+font-size: 20px;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+display: block;
+/*    width: 50%;*/
+}
+
+/*
+a:hover, a:active {
+  background-color: gray;
+}
+*/
+
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #7e0820;
+    font-size: 25px;
+}
+
+li {
+  float:left;
+    
+   
+}
+
+/*
+li a {
+ display: block;
+    
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+*/
+
+/*
+li a:hover:not(.active) {
+  background-color: #111;
+}
+*/
+
+.active {
+  background-color: white;
+    
+}
+
+/*
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+*/
+
+.bouttons{
+    display: flex;
+    font-weight:bold;
+    background-color: #7e0820;
+    justify-content: space-around;
+/*    align-content: ;*/
+/*    align-items: center;*/
+    
+}
+
+
+input[type=text] {
+  width: 70%;
+  padding: 3px 5px;
+  margin: 10px 0;
+/*  box-sizing: border-box;*/
+    
+}
+
+
+.xxx{
+    border: 2px solid #000000;
+    display: grid;
+
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.twoBoxes {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+
+
+.yyy {
+    display: flex;
+    font-weight:bold;
+    background-color: gainsboro;
+    justify-content: space-around;
+/*    align-content: ;*/
+/*    align-items: center;*/
+    
+}
+
+
+
+
+
+
+
+
+
+
