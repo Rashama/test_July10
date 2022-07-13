@@ -2,10 +2,10 @@
 /** Include PHPExcel */
 require_once dirname(dirname(__FILE__)) . '/PHPExcel/PHPExcel.php';
 
-$servername = "localhost";
-$username = "sunwebs2_erp";
-$password = "_Bou^0%Oip87";
-$dbname = "sunwebs2_erp";
+$servername = "mysql-82670-0.cloudclusters.net";
+$username = "admin";
+$password = "nIPlTJi2";
+$dbname = "rasha_one";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
